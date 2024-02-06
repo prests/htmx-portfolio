@@ -13,7 +13,8 @@
   },
   "homepage": "https://github.com/prests/htmx-portfolio#readme",
   "scripts": {
-    "build:css": "postcss ui/**/*.css -o static/css/main.css"
+    "build:css": "postcss ui/**/*.css -o static/css/main.css",
+    "dev:css": "pnpm run build:css -w"
   },
   "devDependencies": {
     "postcss": "^8.4.34",

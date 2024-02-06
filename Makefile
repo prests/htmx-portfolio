@@ -5,6 +5,7 @@
 .PHONY: dev/app
 dev/app:
 	@echo 'Starting app in development mode'
+	pnpm run dev:css &
 	air
 
 # ==================================================================================== #
