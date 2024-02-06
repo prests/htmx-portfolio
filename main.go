@@ -6,13 +6,13 @@ import (
 
 	"github.com/a-h/templ"
 	"github.com/julienschmidt/httprouter"
-	"github.com/prests/htmx-portfolio/components"
 	"github.com/prests/htmx-portfolio/static"
-	"github.com/prests/htmx-portfolio/views"
+	"github.com/prests/htmx-portfolio/ui/components/hello"
+	base_template "github.com/prests/htmx-portfolio/ui/views/base"
 )
 
 func main() {
-	component := views.BaseHTML("Test", components.Hello("Shayne"))
+	component := base_template.BaseHTML("Test", hello.Hello("Shayne"))
 
 	router := httprouter.New()
 

@@ -1,0 +1,23 @@
+{
+  "name": "htmx-portfolio",
+  "description": "devtools for htmx portfolio project",
+  "private": true,
+  "author": "Shayne Preston <shayne.preston@protonmail.com> (https://shaynepreston.com)",
+  "keywords": [
+    "htmx",
+    "devtools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prests/htmx-portfolio.git"
+  },
+  "homepage": "https://github.com/prests/htmx-portfolio#readme",
+  "scripts": {
+    "build:css": "postcss ui/**/*.css -o static/css/main.css"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.34",
+    "postcss-cli": "^11.0.0"
+  },
+  "license": "UNLICENSED"
+}
