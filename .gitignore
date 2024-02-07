@@ -1,5 +1,7 @@
+.DS_Store
 node_modules
 *_templ.go
 tmp
 static/css
+.cert
 
