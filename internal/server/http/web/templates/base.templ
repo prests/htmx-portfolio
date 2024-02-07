@@ -1,6 +1,6 @@
 package templates
 
-templ BaseHTML(title string, contents templ.Component) {
+templ BaseHTML(title string) {
 	<html>
 		<head>
 			<meta charset="UTF-8"/>
@@ -11,7 +11,7 @@ templ BaseHTML(title string, contents templ.Component) {
 			<script src="/static/js/htmx.min.js"></script>
 		</head>
 		<body>
-			@contents
+			{ children... }
 		</body>
 	</html>
 }

@@ -1,0 +1,14 @@
+package templates
+
+import "github.com/prests/htmx-portfolio/internal/server/http/web/components"
+
+type LandingPageProps struct {
+	Title string
+	Name  string
+}
+
+templ LandingPage(props *LandingPageProps) {
+	@BaseHTML(props.Title) {
+		@components.Hello(props.Name)
+	}
+}
