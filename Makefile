@@ -4,9 +4,8 @@
 
 .PHONY: dev/app
 dev/app:
-	@echo 'Starting app in development mode'
-	pnpm run dev:css &
-	air
+	air -c .air.toml &
+	./tailwindcss -i ./internal/server/http/web/input.css -o ./internal/server/http/web/static/css/main.css --minify --watch
 
 # ==================================================================================== #
 # BUILD

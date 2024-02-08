@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    height: 100%;
+    width: 100%;
+    font-family: Lato, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 border-2 border-solid border-[black-coral];
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb:horizontal:hover {
+    display: none;
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply border-2 border-solid border-[black-coral];
+  }
+}
