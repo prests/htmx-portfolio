@@ -4,5 +4,5 @@ node_modules
 tmp
 static/css
 .cert
-tailwindcss-*
+tailwindcss
 

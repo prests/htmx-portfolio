@@ -16,13 +16,14 @@ templ BaseHTML(title string) {
 			<link rel="icon" href={ getStaticPath("img/favicon.ico") }/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<title>{ title }</title>
+			<meta name="description" content="Shayne Preston's software engineering portfolio site"/>
 			<link rel="stylesheet" href={ getStaticPath("css/main.css") }/>
 			<link
 				rel="preload"
 				href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
 				as="font"
 			/>
-			<script src={ getStaticPath("js/htmx.min.js") }></script>
+			<script rel="preload" src={ getStaticPath("js/htmx.min.js") }></script>
 		</head>
 		<body>
 			{ children... }
