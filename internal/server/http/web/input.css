@@ -4,16 +4,20 @@
 
 @layer base {
   :root {
+    @apply bg-black-coral;
     height: 100%;
     width: 100%;
     font-family: Lato, sans-serif;
+    font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
+    @apply text-light-grey;
     height: 100%;
     width: 100%;
+    font-size: 1.6rem;
   }
 
   body::-webkit-scrollbar {
@@ -22,7 +26,7 @@
   }
 
   body::-webkit-scrollbar-thumb {
-    @apply bg-gray-600 border-2 border-solid border-[black-coral];
+    @apply bg-gray-600 border-2 border-solid border-black-coral;
     border-radius: 10px;
   }
 
@@ -31,6 +35,6 @@
   }
 
   body::-webkit-scrollbar-track {
-    @apply border-2 border-solid border-[black-coral];
+    @apply border-2 border-solid border-black-coral;
   }
 }
