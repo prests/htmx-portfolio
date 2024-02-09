@@ -1,6 +1,12 @@
 package static
 
-import "embed"
+import (
+	"embed"
+
+	"github.com/benbjohnson/hashfs"
+)
 
 //go:embed "js" "css" "img"
-var Files embed.FS
+var files embed.FS
+
+var HashedFiles = hashfs.NewFS(files)
