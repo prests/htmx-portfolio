@@ -8,7 +8,6 @@
     height: 100%;
     width: 100%;
     font-family: Lato, sans-serif;
-    font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -17,7 +16,6 @@
     @apply text-light-grey;
     height: 100%;
     width: 100%;
-    font-size: 1.6rem;
   }
 
   body::-webkit-scrollbar {

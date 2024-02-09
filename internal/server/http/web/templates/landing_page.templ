@@ -7,11 +7,22 @@ type LandingPageProps struct {
 
 templ LandingPage(props *LandingPageProps) {
 	@BaseHTML(props.Title) {
-		<div class="w-11/12 flex flex-col my-2 mx-2 text-4xl text-center font-bold sm:text-left lg:w-1/2">
-			<h1 class="mb-2 text-7xl font-black text-orange-red-crystal">Welcome</h1>
-			<h2 class="mb-2">My name is <span class="text-custom-white">Shayne Preston</span> and I build web applications</h2>
-			<p>Want to get in touch with me? Shoot me an email and I'll do my best to get back to you as quickly as possible!</p>
-			<button>Contact Me</button>
+		<div class="w-11/12 flex flex-col justify-center align-center my-2 mx-2 text-xl text-center sm:text-left lg:w-1/2">
+			<h1 class="mt-8 mb-6 text-5xl font-black text-orange-red-crystal">Welcome</h1>
+			<h2 class="mb-4 font-bold text-3xl">
+				My name is <span class="text-custom-white">Shayne Preston</span> and I build web
+				applications
+			</h2>
+			<p class="my-5">
+				Want to get in touch with me? Shoot me an email and I'll do my best to get back to you as quickly as
+				possible!
+			</p>
+			<a
+				href="mailto:shayne.preston@protonmail.com"
+				class="self-center sm:self-start transition ease-in-out hover:bg-orange-red-crystal hover:bg-opacity-40 duration-500 border-2 rounded border-solid border-orange-red-crystal my-5 px-4 py-3 text-orange-red-crystal"
+			>
+				Contact Me
+			</a>
 		</div>
 	}
 }
