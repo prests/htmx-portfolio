@@ -1,32 +1,30 @@
 package templates
 
-import "github.com/prests/htmx-portfolio/internal/server/http/web/static"
-import "fmt"
-
-func getStaticPath(relativePath string) string {
-	hashedPath := static.HashedFiles.HashName(relativePath)
-	return fmt.Sprintf("static/%s", hashedPath)
-}
+import (
+	"github.com/prests/htmx-portfolio/internal/server/http/web/components"
+	"github.com/prests/htmx-portfolio/internal/server/http/web/static"
+)
 
 templ BaseHTML(title string) {
 	<!DOCTYPE html>
 	<html lang="en-US">
 		<head>
 			<meta charset="UTF-8"/>
-			<link rel="icon" href={ getStaticPath("img/favicon.ico") }/>
+			<link rel="icon" href={ static.HashedFiles.GetStaticFilePath("img/favicon.ico") }/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<title>{ title }</title>
 			<meta name="description" content="Shayne Preston's software engineering portfolio site"/>
-			<link rel="stylesheet" href={ getStaticPath("css/main.css") }/>
+			<link rel="stylesheet" href={ static.HashedFiles.GetStaticFilePath("css/main.css") }/>
 			<link
 				rel="preload"
 				href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
 				as="font"
 			/>
-			<script rel="preload" src={ getStaticPath("js/htmx.min.js") }></script>
+			<script rel="preload" src={ static.HashedFiles.GetStaticFilePath("js/htmx.min.js") }></script>
 		</head>
 		<body>
 			{ children... }
+			@components.Footer()
 		</body>
 	</html>
 }

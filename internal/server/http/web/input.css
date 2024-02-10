@@ -4,10 +4,9 @@
 
 @layer base {
   :root {
-    @apply bg-black-coral;
+    @apply bg-black-coral font-lato;
     height: 100%;
     width: 100%;
-    font-family: Lato, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -16,6 +15,8 @@
     @apply text-light-grey;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   body::-webkit-scrollbar {
@@ -34,5 +35,30 @@
 
   body::-webkit-scrollbar-track {
     @apply border-2 border-solid border-black-coral;
+  }
+}
+
+@layer components {
+  .special-link {
+    background: none,
+      linear-gradient(
+        to right,
+        theme("colors.orange-red-crystal"),
+        theme("colors.orange-red-crystal")
+      );
+    background-repeat: no-repeat;
+    background-position:
+      100% 100%,
+      0 100%;
+    background-size:
+      100% 0.1em,
+      0 0.1em;
+    transition: background-size 400ms;
+  }
+
+  .special-link:hover {
+    background-size:
+      0 0.1em,
+      100% 0.1em;
   }
 }

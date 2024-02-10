@@ -13,6 +13,9 @@ module.exports = {
         "custom-white": "#f7f7ff",
         "black-coral": "#2f3f4e",
       },
+      fontFamily: {
+        lato: ["lato", "sans-serif"],
+      },
     },
   },
   plugins: [],
