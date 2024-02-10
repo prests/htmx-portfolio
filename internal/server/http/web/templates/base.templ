@@ -23,6 +23,7 @@ templ BaseHTML(title string) {
 			<script rel="preload" src={ static.HashedFiles.GetStaticFilePath("js/htmx.min.js") }></script>
 		</head>
 		<body>
+			@components.NavBar()
 			{ children... }
 			@components.Footer()
 		</body>

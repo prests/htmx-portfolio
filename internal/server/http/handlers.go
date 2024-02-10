@@ -17,8 +17,13 @@ type Handlers struct {
 func (h *Handlers) routes() http.Handler {
 	router := httprouter.New()
 
-	httpFS := hashfs.FileServer(static.HashedFiles.GetFiles())
-	router.Handler(http.MethodGet, "/static/*filepath", http.StripPrefix("/static/", httpFS))
+	// Cached assets
+	httpCachedFS := hashfs.FileServer(static.HashedFiles.GetFiles())
+	router.Handler(http.MethodGet, "/static/*filepath", http.StripPrefix("/static/", httpCachedFS))
+
+	// Static docs that should not be cached
+	httpDocsFS := http.FS(static.Docs)
+	router.Handler(http.MethodGet, "/docs/*filepath", http.FileServer(httpDocsFS))
 
 	dynamic := alice.New(noSurf)
 	router.Handler(http.MethodGet, "/", dynamic.ThenFunc(h.landingPageHandler))

@@ -1,0 +1,13 @@
+package components
+
+type RouteLinkProps struct {
+	Path string
+	Text string
+}
+
+templ RouteLink(props *RouteLinkProps) {
+	<a href={ templ.URL(props.Path) } class="route mr-5 text-xl text-custom-white font-bold">
+		<span data-content={ props.Text } aria-hidden></span>
+		{ props.Text }
+	</a>
+}

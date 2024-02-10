@@ -8,13 +8,16 @@ import (
 )
 
 //go:embed "js" "css" "img"
-var files embed.FS
+var assets embed.FS
+
+//go:embed "docs"
+var Docs embed.FS
 
 type hashedFiles struct {
 	files *hashfs.FS
 }
 
-var HashedFiles = &hashedFiles{hashfs.NewFS(files)}
+var HashedFiles = &hashedFiles{hashfs.NewFS(assets)}
 
 func (hf *hashedFiles) GetStaticFilePath(relativePath string) string {
 	hashedPath := hf.files.HashName(relativePath)

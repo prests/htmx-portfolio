@@ -3,7 +3,7 @@ package components
 import "github.com/prests/htmx-portfolio/internal/server/http/web/static"
 
 templ Footer() {
-	<div class="flex flex-col justify-center align-center mt-auto mb-6 text-center">
+	<footer class="flex flex-col justify-center align-center mt-auto mb-6 text-center">
 		<span>Created by <span class="text-custom-white">Shayne Preston</span></span>
 		<span>
 			Powered by
@@ -23,5 +23,5 @@ templ Footer() {
 				<img src={ static.HashedFiles.GetStaticFilePath("img/linkedin.svg") } alt="Link to LinkedIn icon"/>
 			</a>
 		</div>
-	</div>
+	</footer>
 }

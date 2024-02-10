@@ -1,0 +1,19 @@
+package components
+
+templ NavBar() {
+	<nav class="flex justify-center items-center mx-12 my-3">
+		<a href="/" class="h-16 mr-auto text-orange-red-crystal transition ease-in-out hover:text-custom-white duration-500">
+			@Logo()
+		</a>
+		@RouteLink(&RouteLinkProps{"/about", "About"})
+		@RouteLink(&RouteLinkProps{"/experience", "Experience"})
+		@RouteLink(&RouteLinkProps{"mailto:shaynepreston@protonmail.com", "Contact Me"})
+		<!--<a href="/about" class="route mr-5 text-xl text-custom-white font-bold">About</a>
+		<a href="/experience" class="route mr-5 text-xl text-custom-white font-bold">Experience</a>
+		<a href="mailto:shaynepreston@protonmail.com" class="route mr-5 text-xl text-custom-white font-bold">Contact</a>-->
+		<a
+			href="/docs/Shayne Preston Resume.pdf"
+			class="transition ease-in-out hover:bg-orange-red-crystal hover:bg-opacity-40 duration-500 border-2 rounded border-solid border-orange-red-crystal px-4 py-2 text-orange-red-crystal"
+		>Resume</a>
+	</nav>
+}
